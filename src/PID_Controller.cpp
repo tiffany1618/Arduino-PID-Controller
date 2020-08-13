@@ -47,6 +47,7 @@ void PID_Controller::reset_values() {
     tot_error = 0;
 }
 
+// Prints time and error values for tuning
 void PID_Controller::tune() {
     calculate();
 
@@ -55,6 +56,7 @@ void PID_Controller::tune() {
     Serial.println(*error);
 }
 
+// Ziegler-Nichols Method
 void PID_Controller::set_tuned_gains(double K_u, double T_u) {
     K_P = 0.6 * K_u;
     K_I = 1.2 * K_u / T_u;
@@ -84,6 +86,7 @@ double PID_Controller::get_K_P() {
 double PID_Controller::get_K_I() {
     return K_I;
 }
+
 double PID_Controller::get_K_D() {
     return K_D;
 }

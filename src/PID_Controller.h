@@ -1,7 +1,3 @@
-//
-// Created by tiffany on 7/23/20.
-//
-
 #ifndef ROBOT_PID_CONTROLLER_H
 #define ROBOT_PID_CONTROLLER_H
 
